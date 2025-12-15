@@ -1,0 +1,51 @@
+
+@import "tailwindcss";
+
+@theme {
+  /* This creates the classes: bg-fibo-dark, text-fibo-primary, etc. */
+  --color-fibo-dark: #0F0F0F;
+  --color-fibo-panel: #1A1A1A;
+  --color-fibo-border: #333333;
+  --color-fibo-primary: #F59E0B;
+  --color-fibo-text: #A3A3A3;
+  --color-fibo-textLight: #E5E5E5;
+}
+
+/* Global Styles */
+:root {
+  --background: var(--color-fibo-dark);
+  --foreground: var(--color-fibo-textLight);
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  
+  /* The Cyberpunk Grid Background */
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  min-height: 100vh;
+}
+/* ... existing code ... */
+
+/* --- THE FIBO SCROLLBAR --- */
+/* Works in Chrome, Edge, Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px; /* Very thin and sleek */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Seamless blend */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #333333; /* Matches border color (subtle) */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #F59E0B; /* GLOWS ORANGE on hover */
+  cursor: pointer;
+}
